@@ -88,6 +88,12 @@
                         <configuration>
                           <!-- Activate the use of TCP to transmit events to the plugin -->
                           <forkNode implementation="org.apache.maven.plugin.surefire.extensions.SurefireForkNodeFactory"/>
+                                 <includes>
+                                          <include>**/Unit*.java</include>
+                                  </includes>
+                             <excludes>
+                                 <exclude>**/IT*.java</exclude>
+                             </excludes>
                         </configuration>
              </plugin>
             <plugin>
