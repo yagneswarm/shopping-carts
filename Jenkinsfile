@@ -22,6 +22,11 @@ pipeline {
       }
     }
 
+    stage('shopping-carts-archive') {
+      steps {
+        archiveArtifacts '**/target/*.jar'
+      }
+    }
 
   }
   tools {
